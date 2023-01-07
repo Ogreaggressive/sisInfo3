@@ -1,0 +1,11 @@
+nombre,especialidades,telefono,direccion
+Casa de Campo,"['Pique Macho', 'Pique Lobo', 'Picantes']",4243937,"{'calle': 'Pasaje Boulevard de la Recoleta', 'numero': '618'}"
+Doña Fely,"['Chorizo Chuquisaqueño', 'Puchero', 'Ranga', 'Fricase', 'Menudito', 'Picantes']",4582972,"{'calle': 'Tumusla entre Calama y Ladislao Cabrera', 'numero': '544'}"
+Doña Pola,"['Escabeche', 'Enrollado', 'Chicharrón', 'Humintas']",4281015,"{'calle': 'Av. América esq. Av. Gualberto Villarroel', 'numero': '275'}"
+Jacarandá,"['Pique Macho', 'Charque', 'Picante de Lengua']",4286424,"{'calle': 'Av. Tadeo Haenke', 'numero': '2150'}"
+La Gaviota,"['Buffet Criollo', 'Intendente', 'Matambre', 'Picante de Lengua', 'Habas Pejtu', 'Plato del Bicentenario']",4424497,"{'calle': 'C. Azanaqueo. Av. América Oeste final', 'numero': '1000'}"
+Felicidad,"['Fideos Uchu', 'Picante de Pollo', 'Variedad de Chichas']",4446591,"{'calle': 'Av. Beneméritos del Chaco, lado puente Killman'}"
+Tunari,"['Chorizo Criollo', 'Ranga', 'Sopa de maní', 'Riñón', 'Lomo']",4528588,"{'calle': 'Av. Ballivian', 'numero': '676'}"
+Miraflores,"['Pique Macho', 'Lechón']",4248780,{'calle': 'c. Tarija casi Av. Aniceto Padilla'}
+Todo al Horno,"['Lechon', 'Pato', 'Pollo', 'Pavo al horno']",4409347,"{'calle': 'Av. Melchor Pérez de Olguín esq. Nueva Castilla', 'numero': '2114'}"
+El Palmar,"['Lapping', 'Pampaku']",4246224,"{'calle': 'c. Man Césped entre Tarcos y Algarrobos', 'numero': '549'}"

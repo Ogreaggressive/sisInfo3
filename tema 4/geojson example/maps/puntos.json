@@ -1,0 +1,36 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Plazuela 4 de noviembre"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-66.156836,-17.371866]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+				"name": "Plazuela de Cala Cala"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-66.163843,-17.366456]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Estadio Sudamericano Felix Capriles"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-66.161794, -17.379124]
+            }
+        }
+
+    ]
+}

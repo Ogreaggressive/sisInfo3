@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Primer mapa con Leaflet 1.9.2</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<script src="leaflet/leaflet.js"></script>
+</head>
+
+<body>
+	<div id="map" style="width:800px; height:600px;"></div>
+	
+	<script>
+		var zoomLevel = 13
+		var map = L.map('map').setView([-17.387, -66.158], zoomLevel);
+
+		//Proveedor: openstreetmap
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+		}).addTo(map);
+
+
+		//Proveedor: arcgisonline
+		// var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+		// 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+		// }).addTo(map)
+
+		//Agregar un marcador
+		var marker = L.marker([-17.38702, -66.15838]).addTo(map);
+
+		//Agregar un polígono
+		var circle = L.circle([-17.38702, -66.15838], {
+			color: 'red',
+			fillColor: '#f03',
+			fillOpacity: 0.2,
+			radius: 800
+		}).addTo(map);
+
+		//Agregar ventanas emergentes
+		marker.bindPopup("<b>Plaza 14 de Septiembre</b><br />Cochabamba - Bolivia");
+		circle.bindPopup("Click en el círculo");
+	</script>
+</body>
+</html>	

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeoJSON - Points</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<link rel="stylesheet" href="leaflet/plugin/markercluster/dist/MarkerCluster.css" />
+	<link rel="stylesheet" href="leaflet/plugin/markercluster/dist/MarkerCluster.Default.css" />
+
+	<script src="leaflet/leaflet.js"></script>
+	<script src="leaflet/plugin/markercluster/dist/leaflet.markercluster.js"></script>
+
+	<script src="jquery/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+	<div id="map" style="width:800px; height:600px;"></div>
+	
+	<script>
+		var zoomLevel = 6
+		var map = L.map('map').setView([-16.495, -68.133], zoomLevel);
+
+		//Proveedor: openstreetmap
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+		}).addTo(map);
+
+		$(document).ready(function() {
+			fetch('recintos_2020.json')
+  				.then((response) => response.json())
+				.then((featureCollection) => addToMap(featureCollection));
+				// .then((featureCollection) => addToMapWithCluster(featureCollection));
+		});
+
+		function addToMap(featureCollection) {
+			L.geoJSON(featureCollection, {
+				filter: function(feature) {
+					return feature.properties.pais == "Bolivia"
+							&& feature.properties.departamento == "La Paz"
+							&& feature.geometry
+				}
+			}).addTo(map);
+		}
+
+		function addToMapWithCluster(featureCollection) {
+			//https://github.com/Leaflet/Leaflet.markercluster#options
+			var markers = L.markerClusterGroup();
+
+			var selectedMarkers = featureCollection.features
+					.filter(feature => {
+						return feature.properties.pais == "Bolivia"
+								&& feature.properties.departamento == "La Paz"
+								&& feature.geometry
+					})
+					.map(feature => {
+						//GeoJson coordinates: [longitude, latitude, elevation]
+						//LeafLet expects [latitude, longitude]
+						console.log(feature.geometry.coordinates);
+						return L.marker([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {title: 'title'});
+					})
+
+			selectedMarkers.forEach(marker => {
+				markers.addLayer(marker);
+			});
+
+			map.addLayer(markers)
+		}
+
+	</script>
+</body>
+</html>	
+
+
+

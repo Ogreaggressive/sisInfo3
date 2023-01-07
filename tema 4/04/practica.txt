@@ -1,0 +1,27 @@
+El propósito de esta práctica es realizar el filtrado de geo datos en el servidor.
+
+En el archivo flask_api.py, agregar el siguiente endpoint:
+
+GET /airports?altitude=<altitud-sobre-el-nivel-del-mar-en-metros>
+
+1)
+La implementación del endpoint deberá seleccionar únicamente los aeropuertos bolivianos cuya altitud sea mayor o igual al parámetro 'altitude', los datos sobre aeropuertos están en el archivo 'airports.json' (la altitud está expresada pies)
+
+
+2)
+Finalmente, modificar el archivo airports.html para emplear dicho servicio. Por ejemplo, el URL http://localhost:8080/file/airports.html?altitude=1000 deberá mostrar en un mapa la ubicación y el nombre de los aeropuertos empleando el servicio creado en el punto 1). Si no se incluye el parámetro 'altitude' en le URL asumir que es cero.
+
+Puede ignorar los registros de aeropuertos que no incluyen el dato de la altitud.
+
+
+
+Referencias
+------------
+
+https://flask.palletsprojects.com/en/2.1.x/quickstart/#the-request-object
+https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+https://www.freecodecamp.org/news/loading-a-json-file-in-python-how-to-read-and-parse-json/
+Notebook: 02_APIs_json.ipynb
+
+
+

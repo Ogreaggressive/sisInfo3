@@ -1,0 +1,13 @@
+Muestre todas las sucursales de la cadena de supermercado Hipermaxi. 
+
+Deberá agrupar los markers de manera que únicamente se muestre la cantidad de sucursales en el mapa, el agrupamiento no debe aplicarse a partir del zoomLevel 13.
+Cada marker muestran los atributos 'title' y  'street'; las sucursales que incluyen una farmacia se muestran en color naranja.
+
+El archivo pec04.mp4 muestra el resultado esperado.
+
+
+Referencias:
+https://leafletjs.com/reference.html#icon
+https://leafletjs.com/reference.html#marker-seticon
+https://github.com/pointhi/leaflet-color-markers
+

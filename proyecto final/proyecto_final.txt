@@ -1,0 +1,21 @@
+El proyecto tiene dos partes. 
+
+La primera parte consiste en extraer los datos de la sección "Cumbres más altas" desde la siguiente fuente para posteriormente generar un archivo en formato GeoJson que incluya la ubicación de cada montaña y las siguientes propiedades: 'name', 'altitude' y 'country'.
+
+NOTA: si se mencionan dos o más paises, obtener el nombre de cualquiera de ellos.
+
+https://es.m.wikipedia.org/wiki/Anexo:Monta%C3%B1as_de_la_cordillera_de_los_Andes
+
+Esta primera parte deberá implementarse como una aplicación de datos de Dagster completando el código en el archivo proyecto_final.py
+
+
+La segunda parte tiene como objetivo visualizar los datos GeoJson en un mapa completando el código que haga falta en el archivo proyecto_final.html para satisfacer los siguientes requerimientos.
+
+- Debe ser posible seleccionar el país en el que se encuentran las montañas que se desean visualizar. Si el país no se proporciona, se deberá mostrar la ubicación de todas las montañas.
+- Cada marker deberá mostrar el nombre de la montaña, su altitud y el país cuando el puntero se ubique sobre del marker.
+- Los markers de las montañas deberán mostrarse empleando los siguientes colores de acuerdo a su altura
+	- altura <= 4500 		(Aqua	#00FFFF)
+	- 4500 < altura <= 5500 (Teal	#008080)
+	- 5500 < altura <= 6500 (Blue	#0000FF)
+	- altura > 6500 		(Navy	#000080)
+
